@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Packages</title>
+    <style>
+        *{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        h1{
+            text-align: center;
+            margin: 50px 0px;
+            color: #FF4500;
+        }
+        .packages-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .package {
+            width: 300px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+        .package:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        .package h2 {
+            color: #FF4500;
+            margin-bottom: 10px;
+        }
+        .package-price {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #FF6347;
+        }
+        .benefits-list {
+            margin-top: 15px;
+            text-align: left;
+        }
+        .benefits-list li {
+            margin-bottom: 8px;
+            color: #555;
+        }
+        .subscribe-form {
+            margin-top: 15px;
+        }
+        .subscribe-button {
+            display: inline-block;
+            text-decoration: none;
+            background-color: #FF6347;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+            font-size: 16px;
+        }
+        .subscribe-button:hover {
+            background-color: #FF5733;
+        }
+        .category {
+            margin-bottom: 40px;
+        }
+        .category h2 {
+            text-align: center;
+            color: #FF4500;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>PACKAGES</h1>
+    <main>
+        <div class="category">
+            <h2>Fitness Packages</h2>
+            <div class="packages-container">
+                <div class="package">
+                    <h3>Standard Fitness</h3>
+                    <p class="package-price">$30/month</p>
+                    <ul class="benefits-list">
+                        <li>Access to gym facilities</li>
+                        <li>Basic fitness classes</li>
+                    </ul>
+                    <form action="/update_package" method="POST" class="subscribe-form">
+                        <input type="hidden" name="package" value="Standard Fitness">
+                        <button type="submit" class="subscribe-button">Subscribe</button>
+                    </form>
+                </div>
+                <div class="package">
+                    <h3>Premium Fitness</h3>
+                    <p class="package-price">$50/month</p>
+                    <ul class="benefits-list">
+                        <li>Full gym access</li>
+                        <li>All fitness classes</li>
+                        <li>Personal trainer (2 sessions/month)</li>
+                    </ul>
+                    <form action="/update_package" method="POST" class="subscribe-form">
+                        <input type="hidden" name="package" value="Premium Fitness">
+                        <button type="submit" class="subscribe-button">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <div class="category">
+            <h2>Wellness Packages</h2>
+            <div class="packages-container">
+                <div class="package">
+                    <h3>Yoga & Meditation</h3>
+                    <p class="package-price">$40/month</p>
+                    <ul class="benefits-list">
+                        <li>Unlimited yoga classes</li>
+                        <li>Meditation sessions</li>
+                        <li>Access to relaxation area</li>
+                    </ul>
+                    <form action="/update_package" method="POST" class="subscribe-form">
+                        <input type="hidden" name="package" value="Yoga & Meditation">
+                        <button type="submit" class="subscribe-button">Subscribe</button>
+                    </form>
+                </div>
+                <div class="package">
+                    <h3>Spa & Wellness</h3>
+                    <p class="package-price">$70/month</p>
+                    <ul class="benefits-list">
+                        <li>Full spa access</li>
+                        <li>Weekly massage session</li>
+                        <li>Nutritional counseling</li>
+                    </ul>
+                    <form action="/update_package" method="POST" class="subscribe-form">
+                        <input type="hidden" name="package" value="Spa & Wellness">
+                        <button type="submit" class="subscribe-button">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Login</title>
+        
+        <link rel="stylesheet" href="static/gym.css">
+    </head>
+    <body style="background-color: orangered;">
+
+        <div class="reg-con">
+            <div class="register-box">
+                <div class="form-header">
+                    <h2>Login</h2>
+                </div>
+                
+                <form action="{{url_for('login')}}" method="post" autocomplete="off">
+
+                    <div class="msg">{{ msg }}</div>
+                <div class="form-group">
+                    
+                    <input type="text" name="username" class = "username" value="" placeholder="Username">
+                </div>
+                
+
+                <div class="form-group">
+                    
+                    <input type="password" name="password" class = "email" value="" placeholder="Password">
+                </div>
+    
+
+                    <button type="submit" class="button2" value="Login">Login</button>
+
+                </form>
+    
+                
+                <a href="{{url_for('register')}}" class="login-link">Don't have an Account? Register instead.</a>
+                
+                
+            </div>
+        </div>
+        
+
+    </body>
+</html>

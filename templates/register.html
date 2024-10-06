@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Register</title>
+        
+        <link rel="stylesheet" href="static/gym.css">
+    </head>
+    <body style="background-color: orangered;">
+
+        <div class="reg-con">
+            <div class="register-box">
+                <div class="form-header">
+                    <h2>Create Account</h2>
+                </div>
+                
+                <form action="{{url_for('register')}}" method="post">
+                <div class="form-group">
+                    
+                    <input type="text" name="username" class = "username" value="" placeholder="Username">
+                </div>
+                
+                <div class="form-group">
+                    
+                    <input type="email" name="email" class = "email" value="" placeholder="Email">
+                </div>
+                
+                <div class="form-group">
+                    
+                    <input type="password" name="password" class = "email" value="" placeholder="Password">
+                </div>
+    
+
+                    <button type="submit" class="button2" value="register">Register</button>
+
+                
+                </form>
+    
+                
+                <a href="{{url_for('login')}}" class="login-link">Already have an Account? Login instead.</a>
+                
+                
+            </div>
+        </div>
+        
+
+    </body>
+</html>

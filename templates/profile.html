@@ -1,0 +1,309 @@
+<!-- <html>
+    <head>
+        <title>HOME</title>
+        
+        <link rel="stylesheet" href="gym.css">
+    </head>
+    <body>
+
+        <div class="side-nav">
+            
+                <a href="#" class="side-list"><li class="list-con">Profile</li></a>
+                <a href="#" class="side-list"><li class="list-con">Booking History</li></a> 
+                <a href="#" class="side-list"><li class="list-con">Update Details</li></a>
+                <a href="#" class="side-list"><li class="list-con">Logout</li></a>
+            
+        </div>
+
+        <div class="profile-head">
+            <h2>Welcome User</h2>
+        </div>
+        <div class="">
+            <div class="profile" id="profile">
+            <div class="circle">
+                <img class="asset2" src="1x/Asset 2.png" alt="">
+            </div>
+            <div class="profile-name">
+                <p >User Name</p>
+                <p>Admin</p>
+            </div>
+            </div>
+        </div>
+
+        <style>
+            #profile{
+                position: relative;
+                margin-top: 10%;
+                left: 35%;
+            }
+        </style>
+
+    </body>
+</html>  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Dashboard</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background-color: #FF4500;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-bottom: 20px;
+        }
+        header h1 {
+            margin: 0;
+            padding: 0;
+            font-size: 24px;
+        }
+        nav {
+            background-color: #FF6347;
+            padding: 10px 0;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out;
+        }
+        nav a:hover {
+            background-color: #FF5733;
+        }
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .dashboard-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .dashboard-section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #FF4500;
+            margin-bottom: 15px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        input, select, button {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #FF6347;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+        button:hover {
+            background-color: #FF5733;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background-color: #FF4500;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-bottom: 20px;
+        }
+        nav {
+            background-color: #FF6347;
+            padding: 10px 0;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out;
+        }
+        nav a:hover {
+            background-color: #FF5733;
+        }
+        main {
+            padding: 20px;
+        }
+        .user-info {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        .user-info h2 {
+            color: #FF4500;
+            margin-bottom: 15px;
+        }
+        .user-info p {
+            margin-bottom: 8px;
+            color: #555;
+        }
+        .welcome-msg {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .packages-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .package {
+            width: 300px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+        .package:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        .package h2 {
+            color: #FF4500;
+            margin-bottom: 10px;
+        }
+        .package-price {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #FF6347;
+        }
+        .benefits-list {
+            margin-top: 15px;
+            text-align: left;
+        }
+        .benefits-list li {
+            margin-bottom: 8px;
+            color: #555;
+        }
+        .subscribe-link {
+            display: inline-block;
+            margin-top: 15px;
+            text-decoration: none;
+            background-color: #FF6347;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out;
+        }
+        .subscribe-link:hover {
+            background-color: #FF5733;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #FF6347;
+            color: white;
+        }
+        td:last-child, th:last-child {
+            text-align: right;
+        }
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        .dashboard-section {
+            overflow-x: auto; /* For mobile responsiveness */
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="/packages">Packages</a>
+        <a href="/editprofile">Profile</a>
+        <a href="/logout">Logout</a>
+    </nav>
+    <main>
+        <div class="dashboard-container">
+            <h1>Welcome, {{ account[1] }}</h1>
+            <div class="user-info">
+                <!-- User Information -->
+                <h2>User Information</h2>
+                <p><strong>Name:</strong> {{account[1]}}</p>
+                <p><strong>Email:</strong> {{account[2]}}</p>
+                <p><strong>Membership:</strong> {{account[4] if account[4] else 'No package selected'}}</p>
+                <!-- Additional user details -->
+            </div>
+
+            <div id="history" class="dashboard-section">
+                <h2>Booking History</h2>
+                    {% if bookings %}
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Package Name</th>
+                                    <th>Booking Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for booking in bookings %}
+                                <tr>
+                                    <td>{{ booking[0] }}</td>
+                                    <td>{{ booking[1].strftime('%Y-%m-%d %H:%M:%S') }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    {% else %}
+                        <p>No booking history available.</p>
+                    {% endif %}
+            </div>
+        </div>
+    </main>
+</body>
+</html>
